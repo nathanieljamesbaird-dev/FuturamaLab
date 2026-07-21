@@ -1,0 +1,57 @@
+/* FONT */
+
+.orbitron-orbit {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.oxanium-ox {
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-jak {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.jost-josh {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* ROOT COLOURS */
+
+:root {
+
+    /* FONT */
+    --orbit: "Orbitron";
+    --ox: "Oxanium";
+    --jak: "Plus Jakarta Sans";
+    --jost: "Jost";
+
+    /* COLOUR */
+    --pink: "#ea6459";
+    --orange: "#ee7600";
+    --purple: "#a15fa9";
+    --skin: "#ffe39f";
+    --light-pink: "#ffb6c1";
+    --ebony: "#282C35";
+
+}
+
+/* PAGE SETUP */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
