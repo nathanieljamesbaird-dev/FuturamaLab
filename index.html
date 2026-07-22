@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- PRELOAD & PREFETCH-->
+    <link rel="preload" href="assets/css/night.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/page-setup.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/night.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,18 +78,34 @@
 
         <!-- NAV BUTTONS -->
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Merch</a></li>
-            <li><a href="#">Media Gallery</a></li>
+            <li><a class="headBtn" href="#">Home</a></li>
+            <li><a class="headBtn" href="#">About Us</a></li>
+            <li><a class="headBtn" href="#">Merch</a></li>
+            <li><a class="headBtn" href="#">Media Gallery</a></li>
+            <li class="cartIcon"><button commandFor="cartSidepanel" command="show-modal"><i class="bi bi-bag"></i></button></li>
         </ul>
     </nav>
 </header>
 
-<section class="">
+<dialog id="cartSidepanel" closedby="any">
 
+    <button commandFor="cartSidepanel" command="close" class="exitBtn"><i class="bi bi-x-lg"></i></button>
+
+
+</dialog>
+
+<!-- SHOOTING STARS -->
+<section class="nightsky">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 </section>
-
 
 
 

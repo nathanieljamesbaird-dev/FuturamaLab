@@ -2,26 +2,15 @@ header {
     max-width: 100%;
     margin-top: 0;
     position: relative;
+    top: 0;
+    /* z-index: 999; */
 }
 
-/* header > nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-} */
-
-/* header > nav > img {
-    height: 15dvh;
-    align-self: center;
-    margin-left: 10vw;
-} */
 
 nav {
     position: absolute;
     right: 10vw;
     top: 5dvh;
-
     margin-right: 0;
     width: max-content;
     
@@ -40,20 +29,49 @@ ul > li {
     align-self: center;
 }
 
-ul > li > a {
+.headBtn {
     text-decoration: none;
-    color: var(--ebony);
+    color: rgba(255,255,255,0.5);
     font-family: var(--ox);
     font-size: clamp(22px, 1rem, 95%);
+    cursor: pointer;
+    width: fit-content;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s ease-in;
+}
+
+.headBtn:hover {
+    color: rgba(255,255,255,1);
+}
+
+
+.headBtn::before {
+    content: '';
+    position: absolute;
+    display: block; 
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.5);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.headBtn:hover::before {
+    transform: scaleX(1);
 }
 
 .banner-container {
     overflow: hidden;
     width: 100%;
-    background: #222;
-    padding: 5px 0;
-    border-top: 2px solid #ff3e6c;
-    border-bottom: 2px solid #ff3e6c;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 2px 0;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2);
 }
 
 .banner-wrapper {
@@ -88,5 +106,80 @@ ul > li > a {
     font-family: var(--orbit);
 }
 
+.cartIcon > button {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: clamp(22px, 1rem, 95%);
+    cursor: pointer;
+    position: relative;
 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartIcon > button:hover {
+    color: rgba(255,255,255,1);
+}
+
+.cartIcon > button::before {
+    content: '';
+    position: absolute;
+    padding: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.cartIcon > button:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#cartSidepanel {
+    width: 400px;
+    height: 100dvh;
+    padding-bottom: 100dvh;
+    position: fixed;
+    left: auto;
+    margin-right: 0;
+    border: transparent;
+    /* transition: 0.3s all ease-in; */
+    animation: slideRight 0.4s both linear;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-left: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2), inset 0 1px 1px 0 rgba(255,255,255,0.3);
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(400px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.exitBtn {
+    background: transparent;
+    border: transparent;
+    position: absolute;
+    left: 1vw;
+    top: 2dvh;
+    font-size: clamp(22px, 1rem, 95%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.exitBtn:hover > i::before {
+    content: "\F114";
+}
 
