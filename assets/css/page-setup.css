@@ -39,12 +39,12 @@
     --jost: "Jost";
 
     /* COLOUR */
-    --pink: "#ea6459";
-    --orange: "#ee7600";
-    --purple: "#a15fa9";
-    --skin: "#ffe39f";
-    --light-pink: "#ffb6c1";
-    --ebony: "#282C35";
+    --pink: #ea6459;
+    --orange: #ee7600;
+    --purple: #a15fa9;
+    --skin: #ffe39f;
+    --light-pink: #ffb6c1;
+    --ebony: #282C35;
 
 }
 

@@ -46,6 +46,9 @@ ul > li {
 }
 
 
+
+
+
 .headBtn::before {
     content: '';
     position: absolute;
@@ -158,6 +161,28 @@ ul > li {
     box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2), inset 0 1px 1px 0 rgba(255,255,255,0.3);
 }
 
+#cartSidepanel::backdrop {
+    display: block;
+    background-color: rgba(0,0,0,0);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    transition: background-color, display, overlay;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-behavior: allow-discrete;
+}
+
+#cartSidepanel[open]::backdrop {
+    background-color: rgba(0,0,0,0.6);
+}
+
+@starting-style {
+    #cartSidepanel[open]::backdrop {
+        background-color: rgba(0,0,0,0);
+    }
+}
+
 @keyframes slideRight {
     from {
         transform: translateX(400px);
@@ -182,4 +207,93 @@ ul > li {
 .exitBtn:hover > i::before {
     content: "\F114";
 }
+
+.intro {
+    width: 100%;
+    height: 100dvh;
+    text-align: center;
+    align-self: center;
+    position: relative;
+    margin: auto;
+    inset: 0;
+    z-index: -1;
+    display: flex;
+}
+
+.intro > h1 {
+    position: absolute;
+    color: #FFF;
+    top: 40%;
+    left: 0;
+    right:0;
+    font-family: var(--orbit);
+    font-size: clamp(80px, 2rem, 95%);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    justify-content: center;
+
+    text-shadow: 
+    /* Step 1: Upper Blue Layer */
+    0px 2px 2px var(--pink),
+    0px 4px 2px var(--pink),
+    0px 6px 2px var(--pink),
+    
+    /* Step 2: Mid-Transition Cyan Layer */
+       0px 8px 2px     var(--purple),
+        0px 10px 2px    var(--purple),
+        0px 12px 2px    var(--purple),
+    
+    /* Step 3: Bottom Green Layer */
+    0px 14px 2px var(--light-pink),
+    0px 16px 2px var(--light-pink),
+    0px 18px 2px var(--light-pink),
+
+    /* Optional: Soft outer glow at the very bottom */
+    0px 22px 15px rgba(32, 201, 151, 0.4);
+    animation: h1Breathe 3s ease-in;
+}
+
+@keyframes h1Breathe {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+    
+}
+
+.exploreBtn {
+    width: 100%;
+    background: red;
+    height: 20px;
+    position: absolute;
+    left: 0;
+}
+
+
+
+.exploreBtn > a {
+
+    color: #FFF;
+    font-family: var(--orbit);
+    font-size: clamp(22px, 2rem, 95%);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.exploreBtn > i {
+     color: #FFF;
+    font-family: var(--orbit);
+    font-size: clamp(22px, 2rem, 95%);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
 
