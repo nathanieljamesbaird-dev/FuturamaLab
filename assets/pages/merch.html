@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PAGE TITLE -->
+    <title>Merch - FuturamaLabs</title>
+
+    <!-- BOOTSTRAP & ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- PRELOAD & PREFETCH-->
+    <link rel="preload" href=".../assets/css/night.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/page-setup.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/night.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <link rel="stylesheet" href="../css/merch.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Erica+One&family=Jost:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&family=Unica+One&family=Zen+Dots&display=swap"
+        rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../img/logo/ChatGPT Image Jul 21, 2026, 09_05_32 PM.png">
+
+</head>
+
+
+<style>
+    .nightsky {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        /* https://lh3.googleusercontent.com/ka_5IYJDRkXZnbptxq64LPuggGL5FM8gnpJlsuSiOQh4b39kMkiRbVfX8iK8bjMg5SLkdfoix09P60wyFjN2=w681-h614 */
+        background: url(../img/background/nightsky.jpg);
+        /*   background-color:black; */
+        background-size: cover;
+        animation: animateBg 50s linear infinite;
+        z-index: -1;
+    }
+
+body.loaded {
+  opacity: 1;
+  /* Slide back to its natural centered position */
+  transform: translateX(0); 
+}
+
+</style>
+
+<body>
+
+    <!-- BANNER TOP OF THE PAGE -->
+    <div class="banner-container">
+
+        <div class="banner-wrapper">
+
+            <!-- FIRST TRACK -->
+            <div class="banner-track">
+                <span class="banner-item"><i class="bi bi-box-seam-fill"></i>FAST SHIPPING</span>
+                <span class="banner-item"><i class="bi bi-tag-fill"></i>10% OFF ALL ITEMS</span>
+                <span class="banner-item"><i class="bi bi-star-fill"></i>RATED ALL TIME</span>
+                <span class="banner-item"><i class="bi bi-patch-check-fill"></i>PREMIUM SERVICE</span>
+                <span class="banner-item"><i class="bi bi-camera-fill"></i>LOCAL PHOTOGRAPHER</span>
+            </div>
+
+            <!-- DUPLICATE FOR SEAMLESS -->
+            <div class="banner-track" aria-hidden="true">
+                <span class="banner-item"><i class="bi bi-box-seam-fill"></i>FAST SHIPPING</span>
+                <span class="banner-item"><i class="bi bi-tag-fill"></i>10% OFF ALL ITEMS</span>
+                <span class="banner-item"><i class="bi bi-star-fill"></i>RATED ALL TIME</span>
+                <span class="banner-item"><i class="bi bi-patch-check-fill"></i>PREMIUM SERVICE</span>
+                <span class="banner-item"><i class="bi bi-camera-fill"></i>LOCAL PHOTOGRAPHER</span>
+            </div>
+
+        </div>
+    </div>
+
+    <header>
+        <nav>
+
+            <!-- LOGO -->
+            <!-- <img src="assets/img/logo/Futuruamalabslogo.png"> -->
+
+            <!-- NAV BUTTONS -->
+            <ul>
+                <li><a class="headBtn" tabindex="-1" href="/index.html">Home</a></li>
+                <li><a class="headBtn" tabindex="-1" href="#">About Us</a></li>
+                <li><a class="headBtn" tabindex="-1" href="assets/pages/merch.html">Merch</a></li>
+                <li><a class="headBtn" tabindex="-1" href="#">Media Gallery</a></li>
+                <li class="cartIcon"><button tabindex="-1" commandFor="cartSidepanel" command="show-modal"><i
+                            class="bi bi-bag"></i></button><div class="cart-count"><div class="cart-number" id="cartNumber">0</div></div></li>
+            </ul>
+        </nav>
+    </header>
+
+    <dialog id="cartSidepanel" closedby="any">
+
+        <button commandFor="cartSidepanel" command="close" class="exitBtn"><i class="bi bi-x-lg"></i></button>
+
+
+        <div class="cart-contain">
+        <div id="cartItemsList">
+            <div class="empty-msg">Your cart is currently empty.</div>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Total: <span id="cartTotalPrice">$0.00</span></h3>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+
+        </div>
+
+    </dialog>
+
+    <!-- SHOOTING STARS -->
+    <section class="nightsky">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+
+    <section class="merch">
+
+        <div class="merch-container">
+            <div class="card" data-id="prod-hoodie" data-name="FuturamaLabs Hoodie" data-price="25.97">
+
+                <!-- Card Title -->
+                <div class="card-title">
+                    <h1>Hoodie</h1>
+                </div>
+
+                <!-- Card Picture of Content -->
+                <div class="card-picture">
+
+                </div>
+
+                <div class="card-container-content">
+
+                    <!-- Size Chart for Customers -->
+                    <div class="card-size">
+
+                    </div>
+
+                    <!-- Drop down box to select qty -->
+                    <div class="card-qty">
+
+                    </div>
+
+                </div>
+
+                <div class="card-price">
+                    $25.97
+                </div>
+
+                <!-- Purhcase/Add to Cart -->
+                <button class="card-button" id="buy-Btn">Add to Cart</button>
+            </div>
+
+            <div class="card" data-id="prod-beanie" data-name="FuturamaLabs Beanie" data-price="10.97">
+
+                <!-- Card Title -->
+                <div class="card-title">
+                    <h1>Beanie</h1>
+                </div>
+
+                <!-- Card Picture of Content -->
+                <div class="card-picture">
+
+                </div>
+
+                <div class="card-container-content">
+
+                    <!-- Size Chart for Customers -->
+                    <div class="card-size">
+
+                    </div>
+
+                    <!-- Drop down box to select qty -->
+                    <div class="card-qty">
+
+                    </div>
+
+                </div>
+
+                <div class="card-price">
+                    $10.97
+                </div>
+
+                <!-- Purhcase/Add to Cart -->
+                <button class="card-button" id="buy-Btn">Add to Cart</button>
+            </div>
+
+            <div class="card" data-id="prod-gloves" data-name="FuturamaLabs Driving Gloves" data-price="5.97">
+
+                <!-- Card Title -->
+                <div class="card-title">
+                    <h1>Gloves</h1>
+                </div>
+
+                <!-- Card Picture of Content -->
+                <div class="card-picture">
+
+                </div>
+
+                <div class="card-container-content">
+
+                    <!-- Size Chart for Customers -->
+                    <div class="card-size">
+
+                    </div>
+
+                    <!-- Drop down box to select qty -->
+                    <div class="card-qty">
+
+                    </div>
+
+                </div>
+
+                <div class="card-price">
+                    $5.97
+                </div>
+
+                <!-- Purhcase/Add to Cart -->
+                <button class="card-button" id="buy-Btn">Add to Cart</button>
+            </div>
+
+            <div class="card" data-id="prod-badges" data-name="Futurama Iron-on Badges" data-price="3.5">
+
+                <!-- Card Title -->
+                <div class="card-title">
+                    <h1>Badges</h1>
+                </div>
+
+                <!-- Card Picture of Content -->
+                <div class="card-picture">
+
+                </div>
+
+                <div class="card-container-content">
+
+                    <!-- Size Chart for Customers -->
+                    <div class="card-size">
+
+                    </div>
+
+                    <!-- Drop down box to select qty -->
+                    <div class="card-qty">
+
+                    </div>
+
+                </div>
+
+                <div class="card-price">
+                    $3.50
+                </div>
+
+                <!-- Purhcase/Add to Cart -->
+                <button class="card-button" id="buy-Btn">Add to Cart</button>
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+
+
+
+    <script src="/merch.js"></script>
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+
+
+</body>
+
+</html>

@@ -36,6 +36,23 @@
 
 <style>
 
+body {
+  opacity: 0;
+  /* Start shifted 50 pixels to the right */
+  transform: translateX(50px); 
+  /* Smoothly transition both opacity and transform over 0.5 seconds */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  /* Prevents horizontal scrollbars during the animation */
+  overflow-x: hidden; 
+}
+
+body.loaded {
+  opacity: 1;
+  /* Slide back to its natural centered position */
+  transform: translateX(0); 
+}
+
+
 
 
 
@@ -80,7 +97,7 @@
         <ul>
             <li><a class="headBtn" tabindex="-1" href="#">Home</a></li>
             <li><a class="headBtn" tabindex="-1" href="#">About Us</a></li>
-            <li><a class="headBtn" tabindex="-1" href="#">Merch</a></li>
+            <li><a class="headBtn" tabindex="-1" href="assets/pages/merch.html">Merch</a></li>
             <li><a class="headBtn" tabindex="-1" href="#">Media Gallery</a></li>
             <li class="cartIcon"><button tabindex="-1" commandFor="cartSidepanel" command="show-modal"><i class="bi bi-bag"></i></button></li>
         </ul>
@@ -110,7 +127,19 @@
 
 <!-- Should probably use span so i can make a cool wavy animation or just have a hover effect  -->
 <section class="intro">
-    <h1>FuturamaLabs</h1>
+    <!-- <h1>FuturamaLabs</h1> -->
+    <span class="title-effect">F</span>
+    <span class="title-effect">u</span>
+    <span class="title-effect">t</span>
+    <span class="title-effect">u</span>
+    <span class="title-effect">r</span>
+    <span class="title-effect">a</span>
+    <span class="title-effect">m</span>
+    <span class="title-effect">a</span>
+    <span class="title-effect">L</span>
+    <span class="title-effect">a</span>
+    <span class="title-effect">b</span>
+    <span class="title-effect">s</span>
 </section>
 
     <!-- Cool Aniamtion arrow putting right points slightly angled upwards or vise versa and the pill fills with color -->
@@ -121,6 +150,12 @@
 
 
 
+
+    <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
 
 
 

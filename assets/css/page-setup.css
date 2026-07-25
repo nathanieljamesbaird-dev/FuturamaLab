@@ -60,3 +60,7 @@ body {
     overflow: hidden;
     position: relative;
 }
+
+/* @view-transition {
+    navigation:auto;
+} */

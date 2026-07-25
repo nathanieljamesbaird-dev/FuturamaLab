@@ -1,0 +1,230 @@
+.merch {
+    width: 100%;
+    height: 80dvh;
+    position: absolute;
+    top: 20dvh;
+}
+
+.merch-container {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    place-items: center;
+
+}
+
+.card {
+    /* padding: 200px 100px; */
+    width: 300px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2), inset 0 1px 1px 0 rgba(255,255,255,0.3);
+
+}
+
+.card-title {
+    top: 10px;
+    width: 100%;
+    padding: 3px 0px;
+    text-align: center;
+    align-self: center;
+    font-size: clamp(18px, 20px, 90%);
+    text-wrap: nowrap;
+    font-family: var(--orbit);
+    color: #fff;
+
+}
+
+.card-picture {
+    width: 95%;
+    height: 50%;
+    border-radius: 5px;
+    background: red;
+    align-self: center;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.card-container-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 0px;
+    place-items: stretch;
+    justify-content: center;
+    padding: 10px 8px
+}
+
+.card-size {
+/* width: 100px; */
+    height:60px;
+    background: green; 
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.card-qty {
+    /* width: 100px; */
+    height: 60px;
+    background: purple;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.card-price {
+    font-size: clamp(22px, 1rem, 95%);
+    font-family: var(--orbit);
+    color: #fff;
+    align-self: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.card-button {
+    width: fit-content;
+    padding: 10px 50px;
+    border-radius: 1rem;
+    border: transparent;
+    margin: auto;
+    margin-bottom:2dvh;
+    transition: all 0.1s ease-in-out;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.card-button:hover {
+    background-color: #222;
+    color: white;
+}
+
+.cart-count {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    bottom: -7px;
+    right: -10px;
+    
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transform: scale(1);
+}
+
+header > nav > ul > li:nth-child(5) {
+    position: relative;
+}
+
+.cart-number {
+    font-size: clamp(1px, 12px, 95%);
+    text-align: center;
+    font-family: var(--orbit);
+}
+
+#cartNumber {
+
+}
+
+.badge-pop {
+    animation: popScale 0.3s;
+}
+
+@keyframes popScale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.35);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#cartSidepanel {
+    padding: 30px 20px;
+    width: 350px;
+    height: 100vh;
+    /* Moves panel to the right edge */
+    margin-left: auto; 
+}
+
+.cart-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: var(--orbit);
+    color: #fff; /* Swap to #000 if your sidebar background is default white */
+}
+
+.item-details h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-family: var(--orbit);
+}
+
+.cart-summary {
+    margin-top: 30px;
+    padding-top: 20px;
+    /* border-top: 2px solid rgba(255, 255, 255, 0.2); */
+}
+
+.checkout-btn {
+    position: absolute;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 2dvh;
+    border-radius: 1rem;
+    /* margin-bottom: 15px; */
+    padding: 12px;
+    font-family: var(--orbit);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s all ease-in-out;
+}
+
+.checkout-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+.cart-contain {
+    width: 100%;
+    margin: auto;
+    margin-top: 5dvh;
+}
+
+
+.cart-summary > h3 {
+    color: #fff;
+    font-family: var(--orbit);
+    font-weight: 100;
+    
+}
+#cartTotalPrice {
+    color: #fff;
+    font-family: var(--orbit);
+}
+
+.empty-msg {
+    
+    color: #fff;
+    font-family: var(--orbit);
+}
